@@ -94,8 +94,7 @@ namespace anowaku
                 (this.PredefinedColorsListBox.ItemContainerGenerator.ContainerFromItem(item) as ListBoxItem)?.Focus();
             }
 
-            if (this.PredefinedColorsListBox.SelectedItem == null &&
-                this.Color != null)
+            if (this.PredefinedColorsListBox.SelectedItem == null)
             {
                 this.RTextBox.Value = this.Color.R;
                 this.GTextBox.Value = this.Color.G;

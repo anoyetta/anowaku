@@ -5,10 +5,10 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <AssemblyTitle>aframe.Core</AssemblyTitle>
-    <Company>AN</Company>
-    <Product>aframe</Product>
-    <Description>this is a framework for something software...</Description>
-    <Copyright>Copyright © AN 2018</Copyright>
+    <Company></Company>
+    <Product>anowaku</Product>
+    <Description>this is my .NET 5 / WPF Framework</Description>
+    <Copyright>©2021 anoyetta</Copyright>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -75,5 +75,18 @@
     <Compile Remove="obj\x64\Release\Dialogs\Views\ColorDialogContent.g.i.cs" />
     <Compile Remove="obj\x64\Release\Dialogs\Views\Dialog.g.i.cs" />
     <Compile Remove="obj\x64\Release\Dialogs\Views\FontDialogContent.g.i.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading.Tasks;
 using Hjson;
 using Newtonsoft.Json;
 
@@ -13,14 +14,41 @@ namespace anowaku
 {
     [JsonObject]
     public abstract class JsonConfigBase :
-        INotifyPropertyChanged
+       INotifyPropertyChanged
     {
         internal static readonly object Locker = new object();
 
         public JsonConfigBase()
         {
+            this.PropertyChanged += async (_, _) =>
+            {
+                if (!this.isLoaded)
+                {
+                    return;
+                }
+
+                if (this.IsAutoSave)
+                {
+                    await Task.Run(() => this.Save());
+                }
+            };
+
             this.LoadDefaultValues();
         }
+
+        private bool isLoaded;
+
+        /// <summary>
+        /// 自動保存をする
+        /// </summary>
+        [JsonIgnore]
+        public bool IsAutoSave { get; set; }
+
+        /// <summary>
+        /// ファイル名
+        /// </summary>
+        [JsonIgnore]
+        public abstract string FileName { get; }
 
         /// <summary>
         /// Singletonインスタンスを返すかまたは設定ファイルをロードして返す
@@ -112,8 +140,10 @@ namespace anowaku
 
                 if (!File.Exists(fileName))
                 {
-                    data?.Save(fileName);
+                    data?.Save();
                 }
+
+                data.isLoaded = true;
 
                 return data;
             }
@@ -251,13 +281,10 @@ namespace anowaku
         /// </summary>
         /// <param name="config">
         /// 保存する設定オブジェクト</param>
-        /// <param name="fileName">
-        /// 保存先のファイルパス</param>
         public static void Save(
-            this JsonConfigBase config,
-            string fileName)
+            this JsonConfigBase config)
         {
-            fileName = JsonConfigBase.SwitchFileName(fileName);
+            var fileName = JsonConfigBase.SwitchFileName(config.FileName);
 
             lock (JsonConfigBase.Locker)
             {

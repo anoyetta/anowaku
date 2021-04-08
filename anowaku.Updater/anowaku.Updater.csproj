@@ -3,7 +3,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>anowaku.Updater</RootNamespace>
     <AssemblyName>anowaku.Updater</AssemblyName>
-    <TargetFramework>net5.0-windows7.0</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -21,10 +21,10 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <AssemblyTitle>aframe.Updater</AssemblyTitle>
-    <Company>AN</Company>
-    <Product>aframe</Product>
-    <Description>this is a framework for something software...</Description>
-    <Copyright>Copyright © AN 2018</Copyright>
+    <Company></Company>
+    <Product>anowaku</Product>
+    <Description>this is my .NET 5 / WPF Framework</Description>
+    <Copyright>©2021 anoyetta</Copyright>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <FileVersion>1.1.0.0</FileVersion>
     <LangVersion>preview</LangVersion>

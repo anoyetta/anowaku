@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>anowaku</RootNamespace>
+    <AssemblyName>anowaku.Core</AssemblyName>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <AssemblyTitle>aframe.Core</AssemblyTitle>
+    <Company>AN</Company>
+    <Product>aframe</Product>
+    <Description>this is a framework for something software...</Description>
+    <Copyright>Copyright © AN 2018</Copyright>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Hjson" Version="3.0.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.4" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.8.0" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.0.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.6" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NLog" Version="4.7.9" />
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1909" />
+    <PackageReference Include="ReactiveProperty" Version="7.8.3" />
+    <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="5.0.1" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="5.0.0" />
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="App.xaml.cs" />
+    <Compile Remove="AssemblyInfo.cs" />
+    <Compile Remove="MainWindow.xaml.cs" />
+    <Compile Remove="Dialogs\ColorDialogResult.cs" />
+    <Compile Remove="Dialogs\ColorDialogWrapper.cs" />
+    <Compile Remove="Dialogs\FontDialogResult.cs" />
+    <Compile Remove="Dialogs\FontDialogWrapper.cs" />
+    <Compile Remove="obj\x64\Debug\GeneratedInternalTypeHelper.g.cs" />
+    <Compile Remove="obj\x64\Debug\GeneratedInternalTypeHelper.g.i.cs" />
+    <Compile Remove="obj\x64\Release\GeneratedInternalTypeHelper.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Views\HelpView.g.cs" />
+    <Compile Remove="obj\x64\Debug\Views\HelpView.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Views\MessageView.g.cs" />
+    <Compile Remove="obj\x64\Debug\Views\MessageView.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Views\MessageWindow.g.cs" />
+    <Compile Remove="obj\x64\Debug\Views\MessageWindow.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Views\UpdateCheckerView.g.cs" />
+    <Compile Remove="obj\x64\Debug\Views\UpdateCheckerView.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Views\HelpView.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Views\MessageView.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Views\MessageWindow.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Views\UpdateCheckerView.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\ColorDialogContent.g.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\ColorDialogContent.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\Dialog.g.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\Dialog.g.i.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\FontDialogContent.g.cs" />
+    <Compile Remove="obj\x64\Debug\Dialogs\Views\FontDialogContent.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Dialogs\Views\ColorDialogContent.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Dialogs\Views\Dialog.g.i.cs" />
+    <Compile Remove="obj\x64\Release\Dialogs\Views\FontDialogContent.g.i.cs" />
+  </ItemGroup>
+</Project>

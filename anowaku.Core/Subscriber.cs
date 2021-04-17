@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace anowaku
 {
@@ -60,6 +61,9 @@ namespace anowaku
             string name = "",
             ThreadPriority priority = ThreadPriority.Normal)
             => Run(doWorkAction, TimeSpan.FromMilliseconds(interval), name, priority);
+
+        public async Task AbortAsync(int timeout = 0)
+            => await Task.Run(() => this.Abort(timeout));
 
         public void Abort(
             int timeout = 0)

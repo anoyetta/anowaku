@@ -4,22 +4,18 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:anowaku="clr-namespace:anowaku"
   xmlns:local="clr-namespace:anowaku.Views"
   mc:Ignorable="d"
   DataContext="{Binding RelativeSource={RelativeSource Self}, Mode=OneWay}"
   d:DataContext="{d:DesignInstance local:MessageView, IsDesignTimeCreatable=True}"
   d:DesignWidth="800"
-  d:DesignHeight="400">
+  d:DesignHeight="400"
+  anowaku:DesignModeProperties.Background="White">
 
   <UserControl.Resources>
     <BooleanToVisibilityConverter x:Key="VisibilityConverter" />
   </UserControl.Resources>
-
-  <d:DesignerProperties.DesignStyle>
-    <Style TargetType="UserControl">
-      <Setter Property="Background" Value="White" />
-    </Style>
-  </d:DesignerProperties.DesignStyle>
 
   <Grid>
     <Grid.RowDefinitions>
